@@ -1,0 +1,15 @@
+---
+
+- name: copy ReplaceOrAdd.sh
+  copy: 
+    src: roles/common/files/ReplaceOrAdd.sh
+    dest: /tmp/ReplaceOrAdd.sh
+    mode: 0755
+    owner: root
+    group: root
+
+- name: replace /etc/sysctl.conf
+  shell: /tmp/ReplaceOrAdd.sh /etc/sysctl.conf "^net.ipv6.conf.all.disable_ipv6 = ." "net.ipv6.conf.all.disable_ipv6 = 1"
+
+- name: replace /etc/sysctl.conf
+  shell: /tmp/ReplaceOrAdd.sh /etc/sysctl.conf "^net.ipv6.conf.default.disable_ipv6 = ." "net.ipv6.conf.default.disable_ipv6 = 1"
