@@ -1,0 +1,7 @@
+---
+- hosts: all
+  become: yes
+  vars_files:
+    - roles/common/group_vars/all.yml
+  tasks:
+    - import_tasks: roles/common/tasks/main.yml
