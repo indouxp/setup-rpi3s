@@ -4,5 +4,5 @@
   vars_files:
     - roles/common/group_vars/all.yml
   tasks:
-    - import_tasks: roles/common/tasks/main.yml
+    - import_tasks: roles/common/tasks/install.yml
     - import_tasks: roles/common/tasks/disable_ipv6.yml
