@@ -3,3 +3,4 @@
 ansible_user : pi
 rpi3-1       : 192.168.0.80
 rpi3-2       : 192.168.0.81
+password     : hacluster
